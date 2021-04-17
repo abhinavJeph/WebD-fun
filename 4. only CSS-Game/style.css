@@ -1,0 +1,108 @@
+.game_container{
+    border: 4px groove black ;
+    height: 500px;
+    width: 720px;
+    background-color: lightgoldenrodyellow;
+    font-family: 'Press Start 2P', cursive;
+    font-size: x-large;
+    text-align: center;
+    /* line-height: 40px; */
+
+}
+.box{
+    display: inline-block;
+    border:2px solid black;
+    height: 40px;
+    width: 40px;
+}
+
+.enemy{
+    margin-left: 80px;
+    border:none;
+    padding:4px 10px 4px 10px;
+    border-radius:5px;
+    /* box-shadow:0px 10px 0px 0px  rgb(177, 62, 21),0px 0px 10px 0px rgba(120, 120, 120, 0.4); */
+    background: orangered;
+    animation: enemy_move 2s infinite;
+    animation-timing-function: linear;
+    /* animation: paused; */
+
+}
+/* .button{
+    border:none;
+    padding:4px 10px 4px 10px;
+    border-radius:5px;
+    box-shadow:0px 10px 0px 0px #1d7f8a,0px 0px 10px 0px rgba(120, 120, 120, 0.4);
+    color:white;
+    background:#239dab;
+    cursor:pointer;
+    transition:all 0.16s;
+    position:relative;
+    top:0;
+    text-align: center;
+    line-height: 40px;
+    height: 40px;
+    width: 80px;
+    transform: translate(310px,394px);
+} */
+
+/* .loading-button{
+    background:#d03651;
+    box-shadow:0px 10px 0px 0px #a72b41,
+      0px 0px 10px 0px rgba(120, 120, 120, 0.4);;
+} */
+
+
+/* .button:active{
+    box-shadow: 0px 5px 0px 0px #1d7f8a;
+    top:5px;
+} */
+.player{
+    border:none;
+    padding:4px 10px 4px 10px;
+    border-radius:5px;
+    /* box-shadow:0px 10px 0px 0px  rgb(10, 10, 71),0px 0px 10px 0px rgba(120, 120, 120, 0.4); */
+    background: darkblue;
+    transform: translate(-5px,455px);
+    animation: player_playing 2s infinite ;
+    animation-play-state: paused;
+}
+.game_container:active .player{
+    animation-play-state: running;
+}
+
+.queen{
+    margin-left: 80px;
+    border:none;
+    padding:4px 10px 4px 10px;
+    border-radius:5px;
+    /* box-shadow:0px 10px 0px 0px  rgb(155, 99, 117),0px 0px 10px 0px rgba(120, 120, 120, 0.4); */
+    background: palevioletred;
+    transform: translateX(5px);
+    
+}
+.enemy.one{
+    animation-direction:alternate-reverse;
+    animation-duration: 2.5s;
+}
+
+.enemy.two{
+    animation-fill-mode: backwards;
+    animation-duration: 1.5s;
+}
+
+
+@keyframes enemy_move{
+    50%{
+        transform: translateY(460px) rotate(360deg);
+    }
+    100%{
+        transform:  translateY(0px) rotate(720deg);
+    }
+}
+
+@keyframes player_playing{
+    100%{
+        transform: translate(660px);
+    }
+}

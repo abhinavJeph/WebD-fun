@@ -1,0 +1,95 @@
+@import url("https://fonts.googleapis.com/css2?family=Antonio:wght@100&family=Lora:wght@600&display=swap");
+* {
+  margin: 0%;
+  padding: 0%;
+  font-family: "Lora", serif;
+}
+
+nav {
+  padding: 1rem 0;
+}
+body {
+  background-color: #e2e0fd;
+}
+.colored {
+  background-color: #553c9a;
+  color: white;
+}
+
+.container {
+  max-width: 90%;
+  margin: 0 auto;
+}
+
+section.input {
+  padding-top: 90px;
+  text-align: center;
+}
+
+section.input h2 {
+  text-align: center;
+  font-size: 25px;
+}
+
+.form_wrap {
+  margin-top: 3vh;
+}
+
+.input_wrap {
+  display: flex;
+  justify-content: center;
+}
+
+.input_wrap > input,
+button {
+  padding: 5px 20px;
+  text-align: center;
+  font-size: 17px;
+  border: none;
+  outline: none;
+  border-width: 1px;
+}
+.input_wrap input {
+  border-radius: 10px 0px 0px 10px;
+}
+.input_wrap button {
+  border-radius: 0px 10px 10px 0px;
+}
+
+section.output {
+  margin-top: 30px;
+  font-size: 17px;
+  text-align: center;
+}
+
+section #loading {
+  display: none;
+}
+
+.out {
+  /* padding: 0% 10%; */
+  margin: 10px auto;
+  /* width: 80vh; */
+  color: #2d3748;
+}
+
+.suggestions {
+  padding: 2.5px 12px;
+  margin: 4px;
+  border-radius: 15px;
+  display: inline-block;
+}
+
+.suggestions:hover,
+#search:hover {
+  background-color: black;
+  cursor: pointer;
+}
+
+audio {
+  outline: none;
+}
+
+audio::-webkit-media-controls-panel {
+  background-color: #c6b3fa;
+}

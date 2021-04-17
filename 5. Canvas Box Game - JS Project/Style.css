@@ -1,0 +1,6 @@
+#paintBox {
+    /* height: 500px;               Strectched rectangle
+    width: 500px; */
+    border: solid black 1px;
+    background-color: pink;
+}

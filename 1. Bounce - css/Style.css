@@ -1,0 +1,49 @@
+.container{
+    height: 80vh;
+    width: 40vw;
+    margin: auto;
+    /* margin-top: 10vh; */
+    background-color:lightpink;
+    border: 2vh solid rgb(61, 11, 11);
+    border-top: none;
+}
+.items{
+    display: inline-block;
+    height: 5vh;
+    width: 5vh;
+    border-radius: 2.5vh;
+    margin: 2vw;
+    margin-top: 10vh;
+    background-color: lightcoral;
+    box-shadow: 0vw 1vh 1vh gray;
+
+    animation: bounce 2s  infinite ;
+}
+.one{
+    animation-timing-function: ease;
+}
+
+.two{
+    animation-timing-function: ease-in;
+}
+.three{
+    animation-timing-function:ease-in-out /*Default*/
+}
+.four{
+    animation-timing-function:ease-out
+}
+.five{
+    animation-timing-function:linear
+}
+@keyframes bounce{
+    0%{
+
+    }
+    50%{
+        transform: translate(0vw,65vh);
+        box-shadow: 0vw 0vh 0vh gray;
+    }
+    100%{
+
+    }
+}

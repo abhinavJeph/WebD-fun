@@ -1,0 +1,26 @@
+body {
+    font-family: 'Work Sans', sans-serif;
+    background-color:lightgoldenrodyellow;
+   }
+   
+   h1, h2, h3, h4, h5, h6 {
+    font-family: 'Crimson Text', serif;
+   }
+
+.dropdown1{
+    display: none;
+    color:orange;
+}
+.Subject{
+    color:violet;
+}
+.Subject>li:hover .dropdown1{
+    display: block;
+}
+.dropdown2{
+    color: crimson;
+    display: none;
+}
+.dropdown1>li:hover .dropdown2{
+    display: block;
+}

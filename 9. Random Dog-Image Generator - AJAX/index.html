@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Random Dog Image Generator</title>
+    <style>
+        header{
+            padding: 0.1vh;
+            background-color:coral;
+            border-bottom: 5px solid orangered;
+            text-align: center;
+            font-size: 1rem;
+            color: white;
+        }
+        div#container{
+            display: flex;
+            flex-direction: column;
+            margin-top: 1vh;
+            align-items: center;
+        }
+
+        button.fetch{
+            padding: 1vh;
+            padding-left: 3vw;
+            padding-right: 3vw;
+            font-size: 2em;
+            font-weight: bolder;
+            border-radius: 60px;
+            background-color: #fff;
+            color: #000;
+            outline: 0ch;
+        }
+        .fetch:active{
+            background-color: #000;
+            color: #fff;
+        }
+        #random-dog-image{
+            margin-top: 1vh;
+            width: 80vh;
+            height: 70vh;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Random Dog Image Generator</h1>
+    </header>
+    <div id="container">
+        <button class="fetch">Fetch</button>
+        <img id="random-dog-image" alt="Random Dog Image">
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
