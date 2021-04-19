@@ -43,13 +43,21 @@ body {
 }
 
 .card {
-  display: flex;
+  display: none;
   max-width: 800px;
   background-color: #212121;
   border-radius: 20px;
   box-shadow: 0 5px 10px rgba(154, 160, 185, 0.05),
     0 15px 40px rgba(0, 0, 0, 0.01);
   padding: 2rem;
+}
+
+#found {
+  display: flex;
+}
+
+#notFound {
+  display: none;
 }
 
 .avatar {
@@ -100,5 +108,9 @@ body {
 
   .user-form {
     max-width: 400px;
+  }
+
+  .user-info ul li {
+    flex-direction: column;
   }
 }
