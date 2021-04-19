@@ -1,0 +1,104 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Roboto", sans-serif;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  overflow: hidden;
+  background-color: #f57f17;
+  color: #fff;
+}
+
+.user-form {
+  width: 100%;
+  max-width: 600px;
+  /* border: 2px solid black; */
+}
+
+.user-form input {
+  width: 100%;
+  display: block;
+  padding: 1rem;
+  border: none;
+  margin-bottom: 2rem;
+  border-radius: 10px;
+  background-color: #212121;
+  color: #fff;
+  font-family: inherit;
+  font-size: 1rem;
+  box-shadow: 0 5px 10px rgba(154, 160, 185, 0.05),
+    0 15px 40px rgba(0, 0, 0, 0.01);
+}
+
+.user-form input::placeholder {
+  color: #bbb;
+}
+.user-form input:focus {
+  outline: none;
+}
+
+.card {
+  display: flex;
+  max-width: 800px;
+  background-color: #212121;
+  border-radius: 20px;
+  box-shadow: 0 5px 10px rgba(154, 160, 185, 0.05),
+    0 15px 40px rgba(0, 0, 0, 0.01);
+  padding: 2rem;
+}
+
+.avatar {
+  border-radius: 50%;
+  height: 150px;
+  width: 150px;
+}
+
+.user-info {
+  margin-left: 2rem;
+}
+
+.user-info ul {
+  list-style-type: none;
+  display: flex;
+  justify-content: space-between;
+  padding: 0%;
+  max-width: 400px;
+}
+
+.user-info ul li {
+  display: flex;
+  align-items: center;
+}
+
+.user-info ul li strong {
+  font-size: 0.9rem;
+  margin-left: 0.5rem;
+}
+
+.repo {
+  background-color: #f57f17;
+  color: #fff;
+  font-size: 0.9rem;
+  border-radius: 5px;
+  padding: 0.25rem 0.5rem;
+  margin: 0 0.5rem 0.5rem 0rem;
+  display: inline-block;
+  text-decoration: none;
+}
+
+@media (max-width: 600px) {
+  .card {
+    max-width: 600px;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .user-form {
+    max-width: 400px;
+  }
+}
