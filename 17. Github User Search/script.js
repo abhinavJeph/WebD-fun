@@ -12,6 +12,7 @@ const bio = document.getElementById("bio");
 const followers = document.getElementById("followers");
 const following = document.getElementById("following");
 const repository = document.getElementById("repository");
+const repoBox = document.getElementById("repoBox");
 
 // Can use then , catch as well
 // axios
@@ -24,6 +25,7 @@ const getUser = async (username) => {
     // destructure res object to get data
     const { data } = await axios(APIURL + username);
     createCard(data);
+    getRepos(username);
   } catch (err) {
     console.log(err.response.status);
     if (err.response.status == 404) {
@@ -31,6 +33,27 @@ const getUser = async (username) => {
     }
   }
 };
+
+async function getRepos(username) {
+  try {
+    const { data } = await axios(APIURL + username + "/repos?sort=created");
+    addReposToCard(data);
+  } catch (err) {
+    console.log(err);
+    console.log("Problem in adding repos");
+  }
+}
+
+function addReposToCard(repos) {
+  repos.splice(0, 10).forEach((repo) => {
+    const repoEl = document.createElement("a");
+    repoEl.classList.add("repo");
+    repoEl.href = repo.html_url;
+    repoEl.innerText = repo.name;
+    repoEl.target = "_blank";
+    repoBox.appendChild(repoEl);
+  });
+}
 
 function createCard(userData) {
   if (!userData) {
@@ -54,7 +77,10 @@ function createCard(userData) {
 
 form.addEventListener("submit", (e) => {
   e.preventDefault();
-  card.style.display = "block";
-  getUser(search.value);
-  search.value = "";
+  if (search.value) {
+    card.style.display = "block";
+    repoBox.innerHTML = "";
+    getUser(search.value);
+    search.value = "";
+  }
 });
