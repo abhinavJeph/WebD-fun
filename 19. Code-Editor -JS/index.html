@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Code-Editor</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+      integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
+      crossorigin="anonymous"
+    />
+  </head>
+  <body>
+    <div class="editor-menu">
+      <button class="btn btn-dark">Dark mode</button>
+      <button class="btn btn-light">Light mode</button>
+      <button class="btn btn-run"><i class="fa fa-play"></i> Run</button>
+      <div class="live btn">
+        <label for="live">Live-</label>
+        <input type="checkbox" id="liveCheckbox" />
+      </div>
+      <div class="heading"><h1>Code Editor</h1></div>
+    </div>
+    <div class="container">
+      <div class="left">
+        <div class="editor" contenteditable=""></div>
+      </div>
+      <div class="bar" title="Click and Drag"></div>
+      <div class="right">
+        <iframe src="" frameborder="0" class="iframe"></iframe>
+      </div>
+    </div>
+    <script src="Script.js"></script>
+  </body>
+</html>
